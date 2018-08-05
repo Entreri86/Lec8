@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lec8.Views.ContPag">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Add" Clicked="OnAdd"/>
+            <Button Text="Delete" Clicked="OnDelete"/>
+            <Button Text="Update" Clicked="OnUpdate"/>
+        </StackLayout>
+        <ListView x:Name="recipesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>        
+    </StackLayout>
+    <!--
+    <TableView>
+        <TableRoot>
+            <TableSection>-->
+                <!--Version sin DataBinding
+                <EntryCell x:Name="title" Text="{Binding Title}" Label="Title" Placeholder="(eg Shopping)" Completed="OnChanged"/>
+                <SwitchCell x:Name="notificationsEnabled" Text="Notifications" On="{Binding NotificationsEnabled}" OnChanged="OnChanged"/>
+                -->
+                <!--Version con DataBinding-->
+                <!--
+                <EntryCell  Text="{Binding Title}" Label="Title" Placeholder="(eg Shopping)" />
+                <SwitchCell Text="Notifications" On="{Binding NotificationsEnabled}" />
+                -->          
+    <!--
+            </TableSection>
+        </TableRoot>
+    </TableView>-->
+</ContentPage>
